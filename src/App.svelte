@@ -34,7 +34,7 @@
 	}
 
 	h1 {
-		color: #ff3e00;
+		color: #ffb4be;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
@@ -45,8 +45,8 @@
 	}
 
 	button {
-		color: wheat;
-		background-color: #333333;
+		color: #333333;
+		background-color: #FFC0C7;
 		margin: 1rem 0
 	}
 
