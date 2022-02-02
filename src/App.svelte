@@ -1,10 +1,22 @@
 <script>
 	export let name;
+
+	let rand = 0
+
+	$: reactive = rand * 2
+
+	function setRand() {
+		rand = Math.random()
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<p>Random number is: {rand}</p>
+	<p>Random number 2X is: {reactive}</p>
+
+	<div><button on:click={setRand}>Shuffle</button></div>
+	<input bind:value={name}/>
 </main>
 
 <style>
