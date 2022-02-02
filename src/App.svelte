@@ -9,17 +9,23 @@
 		rand = Math.random()
 	}
 </script>
+<body>
+	<main>
+		<h1 class="title">Hello {name}!</h1>
+		<p>Random number is: {rand}</p>
+		<p>Random number 2X is: {reactive}</p>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Random number is: {rand}</p>
-	<p>Random number 2X is: {reactive}</p>
-
-	<div><button on:click={setRand}>Shuffle</button></div>
-	<input bind:value={name}/>
-</main>
+		<div><button on:click={setRand}>Shuffle</button></div>
+		<input bind:value={name}/>
+	</main>
+</body>
 
 <style>
+	body {
+		width: 100%;
+		height: 100%;
+		background: rgba(16, 34, 52, 0.8);
+	}
 	main {
 		text-align: center;
 		padding: 1em;
@@ -32,6 +38,21 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+
+	p {
+		color: wheat;
+	}
+
+	button {
+		color: wheat;
+		background-color: #333333;
+		margin: 1rem 0
+	}
+
+	.title {
+		font-size: 4rem;
+		font-weight: 400;
 	}
 
 	@media (min-width: 640px) {
